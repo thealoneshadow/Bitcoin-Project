@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mainTitle 
+{
+    // background: url("Hero.svg") center center;
+    // mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+     
+     height: 107vh;
+     // position: relative;
+}
+.mainTitle::before {
+     content: '';
+     position: absolute;
+     top: 0px;
+     right: 0px;
+     bottom: 0px;
+     left: 0px;
+     background: url("/images/Hero.svg"),url("/images/orange.jpg"),url("/images/blue.jpg") center center no-repeat;
+     background-repeat: repeat-x;
+     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+.mainButton{
+     background-color: #f78d3a;
+     border-color: #f78d3a;
+     
+}
+.filterProperty
+{
+     filter: brightness(0.5);
+}
+.boxShadow
+{
+     box-shadow: -1px 4px 20px -6px rgba(0, 0, 0.75);
+}
+.searchBar{
+         -webkit-font-smoothing: antialiased;
+         -webkit-text-size-adjust: 100%;
+         -webkit-tap-highlight-color: transparent;
+         
+         font-weight: 400;
+         line-height: 1;
+         font-size: 1rem;
+         font-family: sf pro text,
+         -apple-system,
+         BlinkMacSystemFont,
+         Roboto,
+         segoe ui,
+         Helvetica,
+         Arial,
+         sans-serif,
+         apple color emoji,
+         segoe ui emoji,
+         segoe ui symbol;
+         box-sizing: border-box;
+         flex-grow: 1;
+         height: 2.8rem;
+         margin: 0 1.2rem;
+         min-width: 8rem;
+         position: relative;
+         max-width: none;
+}
+.featured-services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+   // background: #fff;
+  background-image: url('/images/Hero.svg');
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.featured-services .icon-box::before {
+  content: '';
+  position: absolute;
+  background: #cbe0fb;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.featured-services .icon-box:hover::before {
+  background: #106eea;
+  top: 0;
+  border-radius: 0px;
+}
+
+.featured-services .icon {
+  margin-bottom: 15px;
+}
+
+.featured-services .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: #106eea;
+  transition: all 0.3s ease-in-out;
+}
+
+.featured-services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.featured-services .title a {
+  color: #111;
+}
+
+.featured-services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.featured-services .icon-box:hover .title a,
+.featured-services .icon-box:hover .description {
+  color: #fff;
+}
+
+.featured-services .icon-box:hover .icon i {
+  color: #fff;
+}
